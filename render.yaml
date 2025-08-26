@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: automacao-checklist-youse
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python src/main.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: PORT
+        value: 5001
+    disk:
+      name: checklist-pdfs
+      mountPath: /tmp/checklist_pdfs
+      sizeGB: 1
+

@@ -1,0 +1,8 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/home/ubuntu/checklist-automation/src/main.py", line 9, in <module>
+    from src.routes.checklist import checklist_bp
+  File "/home/ubuntu/checklist-automation/src/routes/checklist.py", line 67
+    data_geracao = Paragraph(f"<b>Data de Geração:</b> {datetime.now().strftime("%d/%m/%Y %H:%M")}", normal_style)
+                                                                                   ^
+SyntaxError: f-string: unmatched '('
