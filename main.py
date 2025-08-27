@@ -1,8 +1,8 @@
 import os
 from flask import Flask, send_from_directory
-from src.models.user import db
-from src.routes.user import user_bp
-from src.routes.checklist import checklist_bp
+from models.user import db
+from routes.user import user_bp
+from routes.checklist import checklist_bp
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
 app.config['SECRET_KEY'] = 'asdf#FGSgvasgf$5$WGT'
@@ -39,3 +39,5 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5001))
     debug = os.environ.get('FLASK_ENV') != 'production'
     app.run(host='0.0.0.0', port=port, debug=debug)
+
+# TESTE DE ALTERACAO UNICA
